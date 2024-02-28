@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-flow: column;
+}
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 100px;
+    background-color: transparent;
+    border: #acacac solid 2px;
+    border-radius: 5px;
+}
+h1 {
+    font-size: 50px;
+    color: #acacac;
+}
+
+.form {
+    position: relative;
+    margin: 12px 0;
+}
+
+.form input {
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: #acacac solid 2px;
+    background-color: transparent;
+    color: #eee;
+    transition: 0.15 all ease;
+}
+
+.form input:focus {
+    border-color: #eee;
+}
+
+.form input::placeholder {
+    color: transparent;
+}
+
+.form .lbl {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    font-size: 18px;
+    padding: 0 10px;
+    color: #acacac;
+    pointer-events: none;
+    transition: 0.15s all ease;
+}
+.form input:focus + .lbl, 
+.form input:not(:placeholder-shown) + 
+.lbl {
+    transform: translate(5px, -22px);
+    background-color: #000000;
+    font-size: 14px;
+    color: #eee;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 5px;
+    border: #acacac solid 2px;
+    background-color: transparent;
+    color: #eee;
+    transition: 0.15 all ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #acacac;
+    transition: 0.20s all ease-in;
+    color: #000000;
+}
